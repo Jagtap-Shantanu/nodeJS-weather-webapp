@@ -65,16 +65,7 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'search term must be provided in url'
-        })
-    }
-    res.send({
-        products: []
-    })
-})
+
 
 app.get('/help/*', (req, res) => {
     res.render('404page', {
